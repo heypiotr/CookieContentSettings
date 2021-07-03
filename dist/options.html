@@ -9,6 +9,12 @@
             select {
                 font-size: 100%;
             }
+            button,
+            input,
+            select {
+                height: 26px;
+                box-sizing: border-box;
+            }
             table,
             th,
             td {
@@ -44,8 +50,8 @@
         <p id="status-text"></p>
         <form id="add-form">
             <p>
-                <input id="primary-pattern-input" type="text" size="30" placeholder="Primary pattern" />
-                <input id="secondary-pattern-input" type="text" size="30" placeholder="Secondary pattern (optional)" />
+                <input id="primary-pattern-input" type="text" size="25" placeholder="Primary pattern" />
+                <input id="secondary-pattern-input" type="text" size="25" placeholder="Secondary pattern (optional)" />
                 <select id="setting-select">
                     <option>allow</option>
                     <option>block</option>
