@@ -3,12 +3,26 @@
     <head>
         <title>Cookie Content Settings</title>
         <style>
+            body,
+            button,
+            input,
+            select {
+                font-size: 100%;
+            }
             table,
             th,
             td {
                 border: 1px solid black;
                 border-collapse: collapse;
                 padding: 10px;
+            }
+            code {
+                background: #eee;
+                padding: 2px 4px;
+                border-radius: 4px;
+            }
+            .description {
+                max-width: 640px;
             }
             #status-text {
                 height: 1em;
@@ -18,6 +32,15 @@
     </head>
     <body>
         <h1>Cookie Content Settings</h1>
+        <p class="description">
+            Primary pattern will be matched against the request URL, and secondary pattern against the URL of the
+            current page.
+        </p>
+        <p class="description">
+            For example, setting the primary pattern to <code>https://myaccount.com/*</code> and the secondary pattern
+            to <code>*://*.example.com/*</code> will allow cookies in <code>https://myaccount.com</code> requests while
+            on any <code>example.com</code> page, including subdomains.
+        </p>
         <p id="status-text"></p>
         <form id="add-form">
             <p>
@@ -32,7 +55,7 @@
             </p>
         </form>
         <p>
-            <button id="set-all-btn">Set all</button>
+            <button id="set-all-btn" title="Re-add all of the rules below to cookie content settings">Set again</button>
             <button id="clear-all-btn">Clear all</button>
         </p>
         <table id="current-settings-table" border="1">
