@@ -17,9 +17,9 @@ const ui = {
     statusText: document.getElementById("status-text")!,
 
     addForm: document.getElementById("add-form")!,
-    primaryPatternInput: document.getElementById("pri-url")! as HTMLInputElement,
-    secondaryPatternInput: document.getElementById("sec-url")! as HTMLInputElement,
-    settingDropdown: document.getElementById("setting")! as HTMLSelectElement,
+    primaryPatternInput: document.getElementById("primary-pattern-input")! as HTMLInputElement,
+    secondaryPatternInput: document.getElementById("secondary-pattern-input")! as HTMLInputElement,
+    settingDropdown: document.getElementById("setting-select")! as HTMLSelectElement,
 
     setAllButton: document.getElementById("set-all-btn")!,
     clearAllButton: document.getElementById("clear-all-btn")!,
