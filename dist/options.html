@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cookie Content Settings</title>
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 10px;
+            }
+            #status-text {
+                height: 1em;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Cookie Content Settings</h1>
+        <p id="status-text"></p>
+        <form id="add-form">
+            <p>
+                <input id="pri-url" type="text" placeholder="Primary URL" />
+                <input id="sec-url" type="text" placeholder="Secondary URL (optional)" />
+                <select id="setting">
+                    <option>allow</option>
+                    <option>block</option>
+                    <option>session_only</option>
+                </select>
+                <input type="submit" value="Add" />
+            </p>
+        </form>
+        <p>
+            <button id="set-all-btn">Set all</button>
+            <button id="clear-all-btn">Clear all</button>
+        </p>
+        <table id="current-settings-table" border="1">
+            <tbody></tbody>
+        </table>
+        <script src="options.js"></script>
+    </body>
+</html>

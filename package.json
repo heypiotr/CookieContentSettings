@@ -1,0 +1,17 @@
+{
+    "name": "cookie-content-settings-chrome-extension",
+    "version": "1.0.0",
+    "license": "MIT",
+    "author": "Piotr Krawiec <piotr@krawiec.me>",
+    "private": true,
+    "scripts": {
+        "build": "esbuild src/options.ts --bundle --sourcemap=inline --outfile=dist/options.js",
+        "check-types": "tsc --declaration --emitDeclarationOnly"
+    },
+    "devDependencies": {
+        "@tsconfig/recommended": "^1.0.1",
+        "@types/chrome": "0.0.145",
+        "esbuild": "^0.12.14",
+        "typescript": "^4.3.5"
+    }
+}

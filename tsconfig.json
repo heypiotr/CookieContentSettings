@@ -1,0 +1,9 @@
+{
+    "extends": "@tsconfig/recommended/tsconfig.json",
+    "compilerOptions": {
+        "isolatedModules": true,
+        "outDir": "build",
+        "strict": true,
+        "target": "ES2020"
+    }
+}
