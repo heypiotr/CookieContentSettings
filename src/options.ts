@@ -69,12 +69,22 @@ chrome.storage.onChanged.addListener(({ cookieSettings }) => {
     }
 })
 
+function autoCompletePath(pattern: string): string {
+    const patternWithoutPath = new RegExp("^(.+//[^/]+)(/)?$")
+    const match = pattern.match(patternWithoutPath)
+    if (match) {
+        const patternWithoutTrailingSlash = match[1]
+        return patternWithoutTrailingSlash + "/*"
+    }
+    return pattern
+}
+
 ui.addForm.addEventListener("submit", async (event) => {
     event.preventDefault()
 
     const entry: CookieSettingsEntry = {
-        primaryPattern: ui.primaryPatternInput.value,
-        secondaryPattern: ui.secondaryPatternInput.value || undefined,
+        primaryPattern: autoCompletePath(ui.primaryPatternInput.value),
+        secondaryPattern: ui.secondaryPatternInput.value ? autoCompletePath(ui.secondaryPatternInput.value) : undefined,
         setting: ui.settingDropdown.value as CookieSettingsEntry["setting"],
     }
 
