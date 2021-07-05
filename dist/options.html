@@ -39,13 +39,14 @@
     <body>
         <h1>Cookie Content Settings</h1>
         <p class="description">
-            Primary pattern will be matched against the request URL, and secondary pattern against the URL of the
-            current page.
+            Set whether to allow or block cookies in requests matching the primary pattern, while on a&nbsp;page
+            matching the secondary pattern.
         </p>
         <p class="description">
             For example, setting the primary pattern to <code>https://myaccount.com/*</code> and the secondary pattern
-            to <code>*://*.example.com/*</code> will allow cookies in <code>https://myaccount.com</code> requests while
-            on any <code>example.com</code> page, including subdomains.
+            to <code>*://*.example.com/*</code> will allow cookies in <code>https://myaccount.com</code> requests (but
+            not in sub-domain requests, e.g., <code>https://storage.myaccount.com</code>) while on any
+            <code>example.com</code> page (including sub-domains).
         </p>
         <p id="status-text"></p>
         <form id="add-form">
